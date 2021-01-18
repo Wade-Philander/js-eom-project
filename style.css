@@ -4,6 +4,9 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+html{
+    scroll-behavior: smooth;
+}
 .max-width{
     max-width: 1300px;
     padding: 0 80px;
@@ -70,8 +73,10 @@
     cursor: pointer;
     display: none;
 }
+
+
 /*---------------BACKGROUND----------------*/
-/*------------------------- IN PROGRESS!
+
   
 /* --- HOME SECTION-- */
 
@@ -131,7 +136,7 @@
 section{
     padding: 100px 0;
 }
-.about, .services{
+.about, .services, .test, .contact{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .about .title{
@@ -188,7 +193,7 @@ img{
     width: 55%;
 }
 .about .about-content .right .text{
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 600;
     margin-bottom: 10px;
 }
@@ -336,7 +341,173 @@ div[class^='bar-'] {
     width: calc(0 - 6px);
 }
 
-/*--------------- Responsiveness ----------------*/
+/*------------ TESTIMONIALS -----------------*/
+.test{
+    padding-bottom: 80px;
+}
+.test .title{
+    position: relative;
+    text-align: right;
+    font-size: 80px;
+    font-weight: 800;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 50px;
+    margin-right: 100px;
+    opacity: .3;
+    padding-bottom: 50px;
+}
+
+.test .carousel .card {
+    background:rgb(184, 184, 184);
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.test .carousel .card:hover{
+    background: crimson;
+}
+
+.test .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3 ease;
+}
+.test .carousel .card:hover .box{
+    transform: scaleX(1.05);
+}
+
+.test .carousel .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+
+}
+.test .carousel .card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.test .carousel .card:hover img{
+    border-color: white;
+}
+
+.owl-dota{
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dota{
+    height: 20px;
+    width: 20px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid crimson!important;
+    transition: all 0.3s ease;
+}
+
+.contact{
+    background: black;
+    color: white;
+}
+
+.contact .title{
+    position: relative;
+    text-align: right;
+    font-size: 80px;
+    font-weight: 800;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 50px;
+    margin-right: 100px;
+    opacity: .3;
+    padding-bottom: 50px;
+}
+.contact .p{
+    position: relative;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 50px;
+    margin-right: 100px;
+    padding-bottom: 50px;
+}
+
+.formBx{
+    min-width: 60%;
+}
+.formBx form{
+    display: flex;
+    flex-direction: column;
+}
+.formBx form h3{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.formBx form input, .formBx form textarea{
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: #3a3a3a;
+    color: white;
+    resize: none;
+}
+
+.formBx form textarea{
+    min-height: 200px;
+}
+.formBx form input[type="submit"]{
+    max-width: 100px;
+    background:crimson;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+}
+
+.content .contactinfo{
+    min-width: 40%;
+}
+
+.content .contactinfo .box{
+    position: relative;
+    padding: 20px;
+    display: flex;
+}
+.content .contactinfo .box .icon{
+    min-width: 40px;
+    padding-top:4px;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 24px;
+}
+.contactinfo .box .text h3{
+    font-weight: 500;
+    color: #238de4;
+    margin-bottom: 0px;
+}
+
+.footer{
+    background: black;
+    color: white;
+    padding: 20px 23px;
+}
+
+.footer span a{
+    color: crimson;
+}
+
+/*--------------- --------------------------------Responsiveness---------------- ----------------*/
 @media(max-width:1300px){
     .home .max-width{
         margin-left: 0px;
@@ -413,6 +584,10 @@ div[class^='bar-'] {
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
+    .test .carousel{
+        
+        margin-bottom: 20px;
+    }
 }
 
 @media(max-width:690px){
@@ -428,10 +603,6 @@ div[class^='bar-'] {
     .home .home-content a{
         font-size: 20px;
         padding: 9px 25px;
-    }
-    
-    .services .service-content .card{
-        width:100%;
     }
 }
 
