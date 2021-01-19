@@ -1,244 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/366539c517.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
 
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>-->
-
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/366539c517.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      src = "https://code.jquery.com/jquery-3.5.1.min.js";
+    </script>
+  </head>
+  <body>
+    <!--Nav-->
     <nav class="navbar">
-        <div class="max-width">
-            <div class="logo"> <a href="#"><span> My </span>Portfo<span>lio.</span></a></div>
-            <ul class="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#services">Skills</a></li>
-                <li><a href="#test">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
+      <div class="max-width">
+        <div class="logo">
+          <a href="#">My Portfo<span>lio.</span></a>
         </div>
+        <ul class="menu">
+          <li><a href="#"> Home </a></li>
+          <li><a href="#"> About </a></li>
+          <li><a href="#"> Services </a></li>
+          <li><a href="#"> Skills </a></li>
+          <li><a href="#"> Testimonials </a></li>
+          <li><a href="#"> Contact </a></li>
+        </ul>
+      </div>
     </nav>
-    <!-- HOME PAGE-->
+
+    <!--Home-->
     <section class="home" id="home">
-
-        <div class="max-width">
-            <div class="home-content">
-                <div class="text1">Hello, my name is</div>
-                <div class="text2">Wade Philander</div>
-                <div class="text3">And I am <span class="typing"></span></div>
-                <a href="#">Hire me</a>
-            </div>
+      <div class="max-width">
+        <div class="home-content">
+          <div class="t1">Hi, my name is</div>
+          <div class="t2">Wade Philander</div>
+          <div class="t3">
+            Welcome to the future of <span> Web Development </span>
+          </div>
         </div>
+      </div>
     </section>
-    
-    <!--ABOUT PAGE-->
-    <section class="about" id="about">
-        <div class="max-width">
-            <h2 class="title">About me</h2>
-            <div class="about-content">
-                <div class="column left">
-                    <img src="Wade Philander (5).JPG">
-                </div>
-                <div class="column right">
-                    <div class="text">I'm Wade Philander <br>and I am <span class="typing2"></span></div>
-                    <p>I am a young and hungry Developer looking to bring new idea into this industry. I can do front-end developing applying my skills in HTML, CSS and javaScript to design a elegent website or improve a current website to give it that cutting-edge look that will have you mesmerized. I am also very cable in doing back-end developing. Appling my knowledge of Python, MySQL and a bit of C-sharp to solve tomorrows social, industrial or electronical issues.<br>Personally, I prefer back-end developing because it plays t my strengths. As a developer, there is never a straight root to get an answer or slolving a problem, but adding my own innovation and spice gives me a much different viewpoint of a rising issue which i believe could lead to easier and more effecient solutions in the new future.<br> Technlogy is my passion, being a developer is a art, doing the things I love and appreciate is what i aim to do and I am determined to make it a reality for myself and for the people I touch by making a difference in this world through a ever changing, growing and evolving industry.   </p>
-                    <a href="#">Download CV</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--- SERVICE AND ABILITIES PAGE --->
-
-    <section class="services" id="services">
-        <div class="max-width">
-            <div class="title">My Skills and Services</div>
-            <div class="service-content">
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-paint-brush"></i>
-                        <div class="text">Web-Designer</div>
-                        <p>Web-designing is all about innovation, elegence & change. Thats why using my knowledge of CSS and JavaScript would greatly enhance a website using those exact attributes to it fullest potentional in all it can do. </p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-code"></i>
-                        <div class="text">Developer</div>
-                        <p>Being a Developer is never a easy task, but in the world we live in today solving rising issues or even avoiding uncertain pandemics lies at our finger tips and that is how us Developer will impact the world by soling tomorrows issues</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-laptop"></i>
-                        <div class="text">Content Creater</div>
-                        <p>As a content-creater for the gaming, on a social media platform, research and Technlogy is a big part of my everyday life studying things and learning while adapting is part of my everyday life.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!--------------------------------------------------------------------------------------------------------------------->
-
-            <div class="skills" id="skills">
-                <p class="skills-info">
-                    We could never fully understand coding and its language because of the endless possibilies that it can give the world. From the easist languages in my arsenal such as, HTML and CSS to the toughest languages such as CSharp and Python, dedicating myself to learn all I can, and continue to learn all I can and implement them in my search for knowledge.
-                </p>
-                <div class="html">
-                    <div class="tag-html">
-                        <p>HTML</p>
-                    </div>
-                    <div class="progressbar">
-                        <div class="bar-html"></div>
-                    </div>
-                </div>
-                <div class="css">
-                    <div class="tag-css">
-                        <p>CSS</p>
-                    </div>
-                    <div class="progressbar">
-                        <div class="bar-css"></div>
-                    </div>
-                </div>
-                <div class="js">
-                    <div class="tag-js">
-                        <p>JavaScript</p>
-                    </div>
-                    <div class="progressbar">
-                        <div class="bar-js"></div>
-                    </div>
-                </div>
-                <div class="py">
-                    <div class="tag-py">
-                        <p>Python</p>
-                    </div>
-                    <div class="progressbar">
-                        <div class="bar-py"></div>
-                    </div>
-                </div>
-                <div class="c">
-                    <div class="tag-c">
-                        <p>C#</p>
-                    </div>
-                    <div class="progressbar">
-                        <div class="bar-c"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-----------------------TESTIMONIALS------------------>
-
-    <section class="test" id="test">
-        <div class="max-width">
-            <h2 class="title">Testimonials</h2>
-            <div class="carousel owl-carousel">
-                <div class="card">
-                    <div class="box">
-                        <img src="profile1.png" alt="">
-                        <div class="text">Coming soon</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, distinctio.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <img src="profile1.png" alt="">
-                        <div class="text">Coming soon</div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <img src="profile1.png" alt="">
-                        <div class="text">Coming soon</div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <img src="profile1.png" alt="">
-                        <div class="text">Coming soon</div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <img src="profile1.png" alt="">
-                        <div class="text">Coming soon</div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-------------------CONTACT ME-------------->
-    <section class="contact" id="contact">
-        <div class="max-width">
-            <h2 class="title">Contact Me</h2>
-            <p class="p">Using the below details you may contact me and I would gladly get back to you regardless of your query or inquiry</p>
-        
-            <div class="content">
-                <div class=".contactinfo">
-                    <div class="box">
-                        <div class="icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div clas="text">
-                            <h3>Address</h3>
-                            <p>46 Welkom street, Portlands<br>Cape Town<br>7785<br><br></p>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="icon">
-                            <i class="fa fa-phone"></i>
-                        </div>
-                        <div clas="text">
-                            <h3>Phone</h3>
-                            <p>Cell : +27 81 550 2066<br>WhatsApp: +27 67 402 66714<br><br></p>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="icon">
-                        <i class="fa fa-envelope-o"></i>
-                    </div>
-                    <div clas="text">
-                        <h3>E-mail</h3>
-                        <p>wadephilander7@gmail.com</p>
-                    </div>
-                </div>
-            </div>
-            <div class="formBx">
-                <form>
-                    <h3>Message Me</h3>
-                    <input type="text" name="" placeholder="Full Name">
-                    <input type="email" name="" placeholder="Email">
-                    <textarea placeholder="Your Message"></textarea>
-                    <input type="submit" value="Send">
-                </form>
-            </div>
-        </div>
-    </div>
-    </section>
-    <footer>
-        <div class=" Created By Wade Philander"</span class="far fa-copyright"></span><span 2021 All rights seserved.></span>
-    </footer>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sunt odit
+      sequi porro ipsa, dolorum velit officia dolores magni dicta, quo, corporis
+      voluptatum a iure delectus omnis excepturi. Libero dolorem excepturi ipsum
+      ad nisi sint est sapiente veritatis illo, fugiat velit praesentium
+      incidunt dolor consequuntur eveniet suscipit molestiae temporibus
+      molestias soluta distinctio in accusantium maxime sit! Alias dicta sed ea
+      numquam, quam ex officia libero tempore nobis nostrum officiis, aperiam
+      dolorem aspernatur quidem perferendis optio similique. At maiores eum,
+      tempora accusantium enim accusamus saepe natus nulla facere earum ex
+      cumque? Laborum praesentium eaque corporis nulla libero expedita tempore,
+    </p>
     <script src="script.js"></script>
-    </body>
+  </body>
 </html>
