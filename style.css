@@ -1,84 +1,621 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
 }
+html {
+  scroll-behavior: smooth;
+}
 .max-width {
   max-width: 1300px;
   padding: 0 80px;
   margin: auto;
 }
-/*nav*/
+
+/* NAVBAR */
 .navbar {
-  padding: 30px 0;
-  position: sticky;
   width: 100%;
-  font-family: "Ubuntu", sans-serif;
-  padding: 0 80px;
-  transition: all 0.3s;
+  position: fixed;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  transition: all 0.3s ease;
+  z-index: 999;
 }
-.nav.sticky {
-  padding: 30px 0;
+.navbar.sticky {
+  padding: 15px 0;
   background: crimson;
 }
-
 .navbar .max-width {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
-.navbar .logo a {
-  font-size: 35px;
-  font-weight: 600;
-  color: whitesmoke;
-}
 .navbar .logo a span {
   color: crimson;
+  transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span {
+  color: white;
 }
 .navbar .menu li {
   list-style: none;
   display: inline-block;
 }
-.navbar .menu li a {
-  color: whitesmoke;
-  font: size 18px;
-  font: weight 500;
-  margin-left: 25px;
+
+.navbar .logo a {
+  color: white;
+  font-size: 35px;
+  font-weight: 600;
 }
 
-/*---------------------home  styling --------------*/
+.navbar .menu li a {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+  color: crimson;
+}
+.navbar.sticky .menu li a:hover {
+  color: white;
+  font-size: 27px;
+  transition: 0.2s ease;
+}
+
+/* MENU */
+
+.menu-btn {
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+/*---------------BACKGROUND----------------*/
+
+/* --- HOME SECTION-- */
 
 .home {
   display: flex;
-  background: url("im.jpg") no-repeat;
-
+  background: url("Edge-Computing.jpg") no-repeat center;
   height: 100vh;
-  color: whitesmoke;
   min-height: 500px;
-  font-family: "Ubuntu", sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: white;
 }
 
 .home .max-width {
   margin: auto 0 auto 40px;
 }
-.t1 {
+
+.home .home-content .text1 {
   font-size: 27px;
-  color: aliceblue;
 }
-.t2 {
+.home .home-content .text2 {
   font-size: 75px;
-  font-weight: 600px;
-  margin-left: -3px;
+  font-weight: 600;
+  margin-left: -3;
 }
-.t3 {
+.home .home-content .text3 {
   font-size: 40px;
   margin: 5px 0;
 }
-.t3 span {
+
+.home .home-content .text3 span {
   color: crimson;
   font-weight: 500;
+}
+
+.home .home-content a {
+  display: inline-block;
+  background: crimson;
+  color: white;
+  font-size: 25px;
+  padding: 12px 36px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid crimson;
+  transition: all 0.3s ease;
+}
+.about .about-content .column {
+  width: 50%;
+}
+.home .home-content a:hover {
+  color: white;
+  background: none;
+}
+
+/*-------------About--------------------*/
+
+section {
+  padding: 100px 0;
+}
+.about,
+.services,
+.test,
+.contact {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.about .title {
+  position: relative;
+  text-align: right;
+  font-size: 100px;
+  font-weight: 800;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-top: 50px;
+  margin-right: 100px;
+  opacity: 0.3;
+}
+
+.about .title::before {
+  position: absolute;
+  width: 180px;
+  height: 3px;
+  background: black;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.about .title::after {
+  position: absolute;
+  bottom: -12px;
+  font-size: 20px;
+  background: white;
+  left: 50%;
+  transform: translateX(-50%);
+  color: crimson;
+  padding: 5px;
+}
+
+.about .about-content .left {
+  width: 45%;
+}
+
+.about .about-content,
+.services .service-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+img {
+  height: 600px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.about .about-content .right {
+  width: 55%;
+}
+.about .about-content .right .text {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.about .about-content .right .text span {
+  color: crimson;
+}
+.about .about-content .right p {
+  text-align: justify;
+  font-size: 20px;
+}
+.about .about-content .right a {
+  display: inline-block;
+  background: crimson;
+  color: white;
+  font-size: 20px;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid crimson;
+  transition: all 0.3s ease;
+}
+.about .about-content .right a:hover {
+  color: crimson;
+  background: none;
+}
+
+/* ----------------- SERVICE -------------------*/
+
+.services {
+  color: white;
+  background: black;
+}
+.services .title::before {
+  background: white;
+}
+
+.services .title {
+  position: relative;
+  text-align: right;
+  font-size: 80px;
+  font-weight: 800;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-top: 50px;
+  margin-right: 100px;
+  opacity: 0.3;
+  padding-bottom: 50px;
+}
+
+.services .service-content .card {
+  width: calc(33% - 20px);
+  background: #222;
+  text-align: center;
+  border-radius: 6px;
+  padding: 20px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.services .service-content .card:hover {
+  background: crimson;
+}
+
+.services .service-content .card .box {
+  transition: all 0.3s ease;
+}
+
+.services .service-content .card:hover .box {
+  transform: scale(1.05);
+}
+
+.services .service-content .card i {
+  font-size: 50px;
+  color: crimson;
+  transition: color 0.3s ease;
+}
+
+.services .service-content .card:hover i {
+  color: white;
+}
+
+.services .service-content .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+
+/*------------------SKILLS AND SERVICES!---------------*/
+
+.skills {
+  padding-top: 80px;
+  height: 600px;
+}
+
+.skills-info {
+  font-size: 20px;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  text-align: center;
+  margin-bottom: 50px;
+  transform: translateX(-50%);
+}
+
+.html,
+.css,
+.py,
+.js,
+.c {
+  display: flex;
+  justify-content: left;
+  margin-bottom: 40px;
+}
+
+div[class^="tag-"] {
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0% 50%, 0% 0%);
+  width: 120px;
+  height: 30px;
+  background-color: teal;
+  margin-right: 30px;
+}
+
+div[class^="tag-"] p {
+  color: white;
+  text-align: left;
+  font-size: 20px;
+  padding-top: 3px;
+}
+.progressbar {
+  position: relative;
+  width: 600px;
+  height: 20px;
+  border: 2px solid turquoise;
+  border-radius: 20px;
+  margin-top: 7px;
+}
+
+div[class^="bar-"] {
+  position: absolute;
+  background-color: turquoise;
+  height: 20px;
+  border-radius: 20px;
+  margin: 2.7px;
+}
+
+.bar-html .bar-css .bar-js .bar-py .bar-c {
+  width: calc(0 - 6px);
+}
+
+/*------------ TESTIMONIALS -----------------*/
+.test {
+  padding-bottom: 80px;
+}
+.test .p {
+  text-align: center;
+  font-size: 24px;
+  padding: 25px;
+}
+.test .title {
+  position: relative;
+  text-align: right;
+  font-size: 80px;
+  font-weight: 800;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-top: 50px;
+  margin-right: 100px;
+  opacity: 0.3;
+  padding-bottom: 50px;
+}
+
+.test .carousel .card {
+  background: rgb(184, 184, 184);
+  border-radius: 6px;
+  padding: 25px 35px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.test .carousel .card:hover {
+  background: crimson;
+}
+
+.test .carousel .card .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3 ease;
+}
+.test .carousel .card:hover .box {
+  transform: scaleX(1.05);
+}
+
+.test .carousel .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+.test .carousel .card img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid crimson;
+  transition: all 0.3s ease;
+}
+
+.test .carousel .card:hover img {
+  border-color: white;
+}
+
+.owl-dota {
+  text-align: center;
+  margin-top: 20px;
+}
+.owl-dota {
+  height: 20px;
+  width: 20px;
+  margin: 0 5px;
+  outline: none !important;
+  border-radius: 50%;
+  border: 2px solid crimson !important;
+  transition: all 0.3s ease;
+}
+
+.contact {
+  background: black;
+  color: white;
+}
+
+.contact .title {
+  position: relative;
+  text-align: right;
+  font-size: 80px;
+  font-weight: 800;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-top: 50px;
+  margin-right: 100px;
+  opacity: 0.3;
+  padding-bottom: 50px;
+}
+.contact .p {
+  position: relative;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-top: 50px;
+  margin-right: 100px;
+  padding-bottom: 50px;
+}
+
+.formBx {
+  min-width: 60%;
+}
+.formBx form {
+  display: flex;
+  flex-direction: column;
+}
+.formBx form h3 {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.formBx form input,
+.formBx form textarea {
+  margin-bottom: 20px;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background: #3a3a3a;
+  color: white;
+  resize: none;
+}
+
+.formBx form textarea {
+  min-height: 200px;
+}
+.formBx form input[type="submit"] {
+  max-width: 100px;
+  background: crimson;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.content .contactinfo {
+  min-width: 40%;
+}
+
+.content .contactinfo .box {
+  position: relative;
+  padding: 20px;
+  display: flex;
+}
+.content .contactinfo .box .icon {
+  min-width: 40px;
+  padding-top: 4px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 24px;
+}
+.contactinfo .box .text h3 {
+  font-weight: 500;
+  color: #238de4;
+  margin-bottom: 0px;
+}
+
+.footer {
+  background: black;
+  color: white;
+  padding: 20px 23px;
+}
+
+.footer span a {
+  color: crimson;
+}
+
+/*--------------- --------------------------------Responsiveness---------------- ----------------*/
+@media (max-width: 1300px) {
+  .home .max-width {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 1104px) {
+  img {
+    height: 350px;
+    width: 250px;
+  }
+}
+
+@media (max-width: 991px) {
+  .max-width {
+    padding: 0 50px;
+  }
+}
+@media (max-width: 947px) {
+  .menu-btn {
+    display: block;
+    z-index: 999;
+  }
+  .menu-btn i.active::before {
+    content: "\f00d";
+  }
+  .navbar .menu {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    text-align: center;
+    padding-top: 80px;
+    transition: all 0.3s ease;
+    background: black;
+  }
+
+  .navbar .menu.active {
+    left: 0;
+  }
+  .navbar .menu li {
+    display: block;
+  }
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+  }
+  .home .home-content .text2 {
+    font-size: 60px;
+  }
+  .home .home-content .text3 {
+    font-size: 35px;
+  }
+  .home .home-content a {
+    font-size: 23px;
+    padding: 10px 30px;
+  }
+  .about .about-content .column {
+    width: 100%;
+  }
+  .max-width {
+    max-width: 800px;
+  }
+  .about .about-content .left {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+  }
+  .about .about-content .right {
+    flex: 100%;
+  }
+  .services .service-content .card {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+  }
+  .test .carousel {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 690px) {
+  .max-width {
+    padding: 0 23px;
+  }
+  .home .home-content .text2 {
+    font-size: 60px;
+  }
+  .home .home-content .text3 {
+    font-size: 32px;
+  }
+  .home .home-content a {
+    font-size: 20px;
+    padding: 9px 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  .home .home-content .text2 {
+    font-size: 50px;
+  }
+  .home .home-content .text3 {
+    font-size: 27px;
+  }
 }
