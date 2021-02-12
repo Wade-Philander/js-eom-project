@@ -4,9 +4,7 @@
   box-sizing: border-box;
   text-decoration: none;
 }
-html {
-  scroll-behavior: smooth;
-}
+
 .max-width {
   max-width: 1300px;
   padding: 0 80px;
@@ -14,6 +12,7 @@ html {
 }
 
 /* NAVBAR */
+
 .navbar {
   width: 100%;
   position: fixed;
@@ -92,15 +91,15 @@ html {
 }
 
 .home .home-content .text1 {
-  font-size: 27px;
+  font-size: 30px;
 }
 .home .home-content .text2 {
-  font-size: 75px;
+  font-size: 85px;
   font-weight: 600;
   margin-left: -3;
 }
 .home .home-content .text3 {
-  font-size: 40px;
+  font-size: 45px;
   margin: 5px 0;
 }
 
@@ -351,6 +350,7 @@ div[class^="bar-"] {
   text-align: center;
   font-size: 24px;
   padding: 25px;
+  padding-bottom: 65px;
 }
 .test .title {
   position: relative;
@@ -359,7 +359,7 @@ div[class^="bar-"] {
   font-weight: 800;
   font-family: Georgia, "Times New Roman", Times, serif;
   margin-top: 50px;
-  margin-right: 100px;
+  margin-right: 80px;
   opacity: 0.3;
   padding-bottom: 50px;
 }
@@ -381,9 +381,13 @@ div[class^="bar-"] {
   align-items: center;
   justify-content: center;
   transition: all 0.3 ease;
+  outline: none;
+  border-color: transparent;
+  background: transparent;
 }
 .test .carousel .card:hover .box {
   transform: scaleX(1.05);
+  cursor: grab;
 }
 
 .test .carousel .card .text {
@@ -441,6 +445,7 @@ div[class^="bar-"] {
   margin-top: 50px;
   margin-right: 100px;
   padding-bottom: 50px;
+  font-size: x-large;
 }
 
 .formBx {
@@ -463,7 +468,7 @@ div[class^="bar-"] {
   font-size: 16px;
   border: none;
   outline: none;
-  background: #3a3a3a;
+  background: lightgray;
   color: white;
   resize: none;
 }
@@ -504,8 +509,8 @@ div[class^="bar-"] {
 }
 
 .footer {
-  background: black;
-  color: white;
+  background: white;
+  color: black;
   padding: 20px 23px;
 }
 
@@ -513,7 +518,7 @@ div[class^="bar-"] {
   color: crimson;
 }
 
-/*--------------- --------------------------------Responsiveness---------------- ----------------*/
+/*-----------------------------------------------Responsiveness--------------------------------*/
 @media (max-width: 1300px) {
   .home .max-width {
     margin-left: 0px;
@@ -619,3 +624,433 @@ div[class^="bar-"] {
     font-size: 27px;
   }
 }
+/* ------------------------------------------END OF RESPONSIVENESS---------------------------------------------------- */
+/* ------------------pre-loader-------------------------- */
+.body {
+  background: #ecf0f1;
+}
+.load {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*sizes */
+  width: 150px;
+  height: 150px;
+  opacity: 3000;
+}
+.load hr {
+  border: 0;
+  margin: 0;
+  width: 40%;
+  height: 40%;
+  position: absolute;
+  border-radius: 50%;
+  animation: spin 2s ease infinite;
+}
+
+.load :first-child {
+  background: #19a68c;
+  animation-delay: -1.5s;
+}
+.load :nth-child(2) {
+  background: #f63d3a;
+  animation-delay: -1s;
+}
+.load :nth-child(3) {
+  background: #fda543;
+  animation-delay: -0.5s;
+}
+.load :last-child {
+  background: #193b48;
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(160%);
+  }
+  50% {
+    transform: translate(160%, 160%);
+  }
+  75% {
+    transform: translate(0, 160%);
+  }
+  90% {
+    z-index: -1;
+  }
+}
+/*-------------------------------PROGRESS BARS-------------------------------*/
+
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: white;
+  width: 100%;
+  height: 100%;
+  font-family: "PT Sans", sans-serif;
+}
+.skills-bar-container {
+  position: relative;
+  width: 40%;
+  min-width: 300px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  list-style: none;
+}
+.skills-bar-container li {
+  position: relative;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.skills-bar-container li .progressbar-title {
+  color: #fff;
+}
+.skills-bar-container li .progressbar-title h3 {
+  display: inline-block;
+}
+.skills-bar-container li .progressbar-title .percent {
+  position: absolute;
+  right: 5px;
+}
+.skills-bar-container li .bar-container {
+  background: #555;
+  position: relative;
+  width: 100%;
+  height: 5px;
+  margin-top: 5px;
+  display: block;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+.skills-bar-container li .bar-container .progressbar {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.skills-bar-container li .bar-container #progress-html {
+  -webkit-animation-name: progress-html;
+  animation-name: progress-html;
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+.skills-bar-container li .bar-container #progress-css {
+  -webkit-animation-name: progress-css;
+  animation-name: progress-css;
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+.skills-bar-container li .bar-container #progress-javascript {
+  -webkit-animation-name: progress-javascript;
+  animation-name: progress-javascript;
+  -webkit-animation-delay: 2.1s;
+  animation-delay: 2.1s;
+}
+.skills-bar-container li .bar-container #progress-python {
+  -webkit-animation-name: progress-python;
+  animation-name: progress-python;
+  -webkit-animation-delay: 2.8s;
+  animation-delay: 2.8s;
+}
+.skills-bar-container li .bar-container #progress-flask {
+  -webkit-animation-name: progress-flask;
+  animation-name: progress-flask;
+  -webkit-animation-delay: 3.5s;
+  animation-delay: 3.5s;
+}
+
+.progressred {
+  background-color: #e9230d;
+}
+
+.progressblue {
+  background-color: #238de4;
+}
+
+.progresspurple {
+  background-color: purple;
+}
+
+.progressorange {
+  background-color: orange;
+}
+
+.progressgreen {
+  background-color: green;
+}
+
+@-webkit-keyframes progress-html {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes progress-css {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@-webkit-keyframes progress-javascript {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-webkit-keyframes progress-python {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 55%;
+  }
+}
+@-webkit-keyframes progress-flask {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 65%;
+  }
+}
+@-moz-keyframes progress-html {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-moz-keyframes progress-css {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@-moz-keyframes progress-javascript {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-moz-keyframes progress-python {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 55%;
+  }
+}
+@-moz-keyframes progress-flask {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 65%;
+  }
+}
+@keyframes progress-html {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes progress-css {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@keyframes progress-javascript {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes progress-python {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 55%;
+  }
+}
+@keyframes progress-flask {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 65%;
+  }
+}
+
+/* ------------------------------PROJECTS------------------------ */
+
+.projects {
+  background-color: white;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100vh;
+  font-family: "Lato";
+}
+.projects .title {
+  position: relative;
+  text-align: right;
+  font-size: 80px;
+  font-weight: 800;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-top: 50px;
+  margin-right: 80px;
+  opacity: 0.3;
+  padding-bottom: 50px;
+}
+.projects .wrapper {
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.projects .max-width .card {
+  flex: 1;
+  flex-basis: 300px;
+  flex-grow: 0;
+  height: 440px;
+  background: #fff;
+  border: 2px solid #fff;
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  overflow: hidden;
+  position: relative;
+}
+.projects .card img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+}
+.descriptions {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  height: 100%;
+  transition: all 0.7s ease-in-out;
+  padding: 20px;
+  box-sizing: border-box;
+  clip-path: circle(0% at 100% 100%);
+}
+.projects .card:hover .descriptions {
+  left: 0px;
+  transition: all 0.7s ease-in-out;
+  clip-path: circle(75%);
+}
+.projects .card:hover {
+  transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+  transform: scale(0.97);
+}
+.projects.card:hover img {
+  transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  transform: scale(1.6) rotate(20deg);
+  filter: blur(3px);
+}
+.projects .card h1 {
+  color: #ff3838;
+  letter-spacing: 1px;
+  margin: 0px;
+}
+.projects .card p {
+  line-height: 24px;
+  height: 70%;
+}
+.projects .card button {
+  width: fit-content;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: darkblue;
+  color: whitesmoke;
+  font-size: 15px;
+  outline: none;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s ease-in-out;
+}
+
+/*  footer   */
+footer {
+  background-color: black;
+  color: #fff;
+  font-size: 14px;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 998;
+}
+
+footer p {
+  margin: 10px 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida  Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+footer .fa-facebook-square {
+  color: palevioletred;
+}
+fotter .fa-linkedin {
+  color: #0073b1;
+}
+footer a {
+  color: #3c97bf;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+/* footer  */

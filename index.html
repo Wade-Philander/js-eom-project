@@ -16,8 +16,14 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
 
 </head>
+<div class="load">
+    <hr/><hr/><hr/><hr/>
+</div>
+
     <nav class="navbar">
         <div class="max-width">
             <div class="logo"> <a href="#"><span> My </span>Portfo<span>lio.</span></a></div>
@@ -25,7 +31,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#services">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#test">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -42,11 +48,15 @@
                 <div class="text1">Hello, my name is</div>
                 <div class="text2">Wade Philander</div>
                 <div class="text3">And I am <span class="typing"></span></div>
-                <a href="#">Hire me</a>
+                <a href="https://www.facebook.com/wade.philander.56" target="Blank"><i class="fa fa-facebook-square"aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/wade-philander-56a945205/" target="Blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                <a href="https://github.com/Wade-Philander" target="Blank"><i class="fa fa-github" aria-hidden="true"></i></a>
             </div>
         </div>
     </section>
-    <!--ABOUT PAGE-->
+
+    <!------------------------------ABOUT PAGE----------------------------------------->
+
     <section class="about" id="about">
         <div class="max-width">
             <h2 class="title">About me</h2>
@@ -57,13 +67,13 @@
                 <div class="column right">
                     <div class="text">I'm Wade Philander <br>and I am <span class="typing2"></span></div>
                     <p>I am a young and hungry Developer looking to bring new idea into this industry. I can do front-end developing applying my skills in HTML, CSS and javaScript to design a elegent website or improve a current website to give it that cutting-edge look that will have you mesmerized. I am also very cable in doing back-end developing. Appling my knowledge of Python, MySQL and a bit of C-sharp to solve tomorrows social, industrial or electronical issues.<br>Personally, I prefer back-end developing because it plays t my strengths. As a developer, there is never a straight root to get an answer or slolving a problem, but adding my own innovation and spice gives me a much different viewpoint of a rising issue which i believe could lead to easier and more effecient solutions in the new future.<br> Technlogy is my passion, being a developer is a art, doing the things I love and appreciate is what i aim to do and I am determined to make it a reality for myself and for the people I touch by making a difference in this world through a ever changing, growing and evolving industry.   </p>
-                    <a href="#">Download CV</a>
+                    <a href="CV WADE PHILANDER 2020.docx" target="_blank" download >Download CV</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!--- SERVICE AND ABILITIES PAGE --->
+    <!----------------------------- SERVICE AND ABILITIES PAGE ----------------------->
 
     <section class="services" id="services">
         <div class="max-width">
@@ -93,57 +103,106 @@
                 </div>
             </div>
 
-            <!--------------------------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------->
 
             <div class="skills" id="skills">
                 <p class="skills-info">
                     We could never fully understand coding and its language because of the endless possibilies that it can give the world. From the easist languages in my arsenal such as, HTML and CSS to the toughest languages such as CSharp and Python, dedicating myself to learn all I can, and continue to learn all I can and implement them in my search for knowledge.
                 </p>
-                <div class="html">
-                    <div class="tag-html">
-                        <p>HTML</p>
-                    </div>
-                    <div class="progressbar">
-                        <div class="bar-html"></div>
+            </div>
+
+            <ul class="skills-bar-container">
+  
+                <li>
+                  <div class="progressbar-title">
+                    <h3>HTML5</h3>
+                    <span class="percent" id="html-pourcent"></span>
+                  </div>
+                  <div class="bar-container">
+                    <span class="progressbar progressred" id="progress-html"></span>
+                  </div>
+                </li>
+                <li>
+                  <div class="progressbar-title">
+                    <h3>CSS</h3>
+                    <span class="percent" id="css-pourcent"></span>
+                  </div>
+                  <div class="bar-container">
+                    <span class="progressbar progressblue" id="progress-css"></span>
+                  </div>
+                </li>
+                
+                <li>
+                  <div class="progressbar-title">
+                    <h3>JavaScript / jQuery</h3>
+                    <span class="percent" id="javascript-pourcent"></span>
+                  </div>
+                  <div class="bar-container">
+                    <span class="progressbar progresspurple" id="progress-javascript"></span>
+                  </div>
+                </li>
+                
+                <li>
+                  <div class="progressbar-title">
+                    <h3>Python</h3>
+                    <span class="percent" id="python-pourcent"></span>
+                  </div>
+                  <div class="bar-container">
+                    <span class="progressbar progressorange" id="progress-python"></span>
+                  </div>
+                </li>
+                
+                <li>
+                  <div class="progressbar-title">
+                    <h3>Flask</h3>
+                    <span class="percent" id="flask-pourcent"></span>
+                  </div>
+                  <div class="bar-container">
+                    <span class="progressbar progressgreen" id="progress-flask"></span>
+                  </div>
+                </li>
+                
+              </ul>
+        </div>
+        <!--------------------------------------PROJECTS----------------------------------------------------->
+    </section>
+
+    <section class="projects" id="projects">
+         <div class="max-width">
+            <h2 class= title>My Projects</h2>
+
+            <div class="wrapper">
+                <div class="card">
+                    <img src="Wade Philander (5).JPG">
+                        <div class="descriptions">
+                        <h1>Project 1</h1>
+                        <p>
+                            After gunning down a member of the High Table -- the shadowy international assassin's guild -- legendary hit man John Wick finds himself stripped of the organization's protective services. Now stuck with a $14 million bounty on his head, Wick must fight his way through the streets of New York as he becomes the target of the world's most ruthless killers.
+                        </p>
+                        <button>
+                            <i class="fab fa-github"></i>
+                            Check github repository
+                        </button>
                     </div>
                 </div>
-                <div class="css">
-                    <div class="tag-css">
-                        <p>CSS</p>
-                    </div>
-                    <div class="progressbar">
-                        <div class="bar-css"></div>
-                    </div>
-                </div>
-                <div class="js">
-                    <div class="tag-js">
-                        <p>JavaScript</p>
-                    </div>
-                    <div class="progressbar">
-                        <div class="bar-js"></div>
-                    </div>
-                </div>
-                <div class="py">
-                    <div class="tag-py">
-                        <p>Python</p>
-                    </div>
-                    <div class="progressbar">
-                        <div class="bar-py"></div>
-                    </div>
-                </div>
-                <div class="c">
-                    <div class="tag-c">
-                        <p>C#</p>
-                    </div>
-                    <div class="progressbar">
-                        <div class="bar-c"></div>
+
+                <div class="card">
+                    <img src="Wade Philander (5).JPG">
+                    <div class="descriptions">
+                        <h1>Project 2</h1>
+                        <p>
+                            If you have a problem and there is nowhere else to turn, the mysterious and elusive Robert McCall will deliver the vigilante justice you seek. This time, however, McCall's past cuts especially close to home when thugs kill Susan Plummer -- his best friend and former colleague. Now out for revenge, McCall must take on a crew of highly trained assassins who'll stop at nothing to destroy him.                </p>
+                        <button>
+                            <a href="https://github.com/Wade-Philander/Python.Weather.App" taget="blank"> <i class="fab fa-github"></i>
+                            Check github repository </a>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-----------------------TESTIMONIALS------------------>
+    <!---------------------------------------------TESTIMONIALS-------------------------------------------->
 
     <section class="test" id="test">
         <div class="max-width">
@@ -186,10 +245,26 @@
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="profile1.png" alt="">
+                        <div class="text">Coming soon</div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="profile1.png" alt="">
+                        <div class="text">Coming soon</div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <!-------------------CONTACT ME-------------->
+
+    <!---------------------------------------------CONTACT ME------------------------------------>
+
     <section class="contact" id="contact">
         <div class="max-width">
             <h2 class="title">Contact Me</h2>
@@ -237,6 +312,14 @@
         </div>
     </div>
     </section>
+    <footer>
+        <p>
+            Created by <a target="blank" href="https://www.linkedin.com/in/wade-philander-56a945205/">Wade Philander</a>
+            Find me on: 
+            <a target="blank"  href=""><i class="fab fa-facebook-square"></i></a>
+            <a target="blank"  href="https://www.linkedin.com/in/wade-philander-56a945205/"><i class="fab fa-linkedin"></i></a> 
+        </p>
+    </footer>
     <script src="script.js"></script>
     </body>
 </html>
