@@ -74,11 +74,11 @@ $(document).ready(function () {
 });
 
 var lang = {
-  html: "100%",
-  css: "90%",
+  html: "85%",
+  css: "80%",
   javascript: "70%",
-  python: "55%",
-  flask: "65%",
+  python: "65%",
+  spl: "55%",
 };
 
 var multiply = 4;

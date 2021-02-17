@@ -4,6 +4,9 @@
   box-sizing: border-box;
   text-decoration: none;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 .max-width {
   max-width: 1300px;
@@ -84,6 +87,7 @@
   min-height: 500px;
   font-family: Georgia, "Times New Roman", Times, serif;
   color: white;
+  background-size: cover;
 }
 
 .home .max-width {
@@ -140,7 +144,7 @@ section {
 }
 .about .title {
   position: relative;
-  text-align: right;
+  text-align: center;
   font-size: 100px;
   font-weight: 800;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -178,7 +182,7 @@ section {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  align-items: center;
+
   justify-content: space-between;
 }
 
@@ -232,7 +236,7 @@ img {
 
 .services .title {
   position: relative;
-  text-align: right;
+  text-align: center;
   font-size: 80px;
   font-weight: 800;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -345,6 +349,8 @@ div[class^="bar-"] {
 /*------------ TESTIMONIALS -----------------*/
 .test {
   padding-bottom: 80px;
+  background: black;
+  color: #ecf0f1;
 }
 .test .p {
   text-align: center;
@@ -354,7 +360,7 @@ div[class^="bar-"] {
 }
 .test .title {
   position: relative;
-  text-align: right;
+  text-align: center;
   font-size: 80px;
   font-weight: 800;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -423,19 +429,22 @@ div[class^="bar-"] {
 }
 
 .contact {
-  background: black;
-  color: white;
+  color: black;
+  padding-top: 100px;
+  background: url("wall.jpeg") no-repeat center;
+  background-size: cover;
+  font-size: 26px;
 }
 
 .contact .title {
   position: relative;
-  text-align: right;
-  font-size: 80px;
+  text-align: center;
+  font-size: 88px;
   font-weight: 800;
   font-family: Georgia, "Times New Roman", Times, serif;
   margin-top: 50px;
   margin-right: 100px;
-  opacity: 0.3;
+
   padding-bottom: 50px;
 }
 .contact .p {
@@ -445,7 +454,7 @@ div[class^="bar-"] {
   margin-top: 50px;
   margin-right: 100px;
   padding-bottom: 50px;
-  font-size: x-large;
+  font-size: 50px;
 }
 
 .formBx {
@@ -469,7 +478,7 @@ div[class^="bar-"] {
   border: none;
   outline: none;
   background: lightgray;
-  color: white;
+  color: black;
   resize: none;
 }
 
@@ -491,13 +500,14 @@ div[class^="bar-"] {
 .content .contactinfo .box {
   position: relative;
   padding: 20px;
-  display: flex;
+  display: grid;
+  grid-row: 2;
 }
 .content .contactinfo .box .icon {
   min-width: 40px;
   padding-top: 4px;
   color: white;
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
   font: 24px;
@@ -506,16 +516,6 @@ div[class^="bar-"] {
   font-weight: 500;
   color: #238de4;
   margin-bottom: 0px;
-}
-
-.footer {
-  background: white;
-  color: black;
-  padding: 20px 23px;
-}
-
-.footer span a {
-  color: crimson;
 }
 
 /*-----------------------------------------------Responsiveness--------------------------------*/
@@ -629,11 +629,33 @@ div[class^="bar-"] {
 .body {
   background: #ecf0f1;
 }
+.preloader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-image: linear-gradient(140deg, black, rgb(19, 19, 246), black);
+  animation: disappear 5s linear forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes disappear {
+  0%,
+  90% {
+    opacity: 1;
+    z-index: 1000;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
 .load {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   /*sizes */
   width: 150px;
   height: 150px;
@@ -642,32 +664,32 @@ div[class^="bar-"] {
 .load hr {
   border: 0;
   margin: 0;
-  width: 40%;
-  height: 40%;
-  position: absolute;
+  width: 80px;
+  height: 80px;
+  /* position: absolute; */
+  position: fixed;
   border-radius: 50%;
-  animation: spin 2s ease infinite;
+  animation: spin 5s ease forwards;
 }
 
 .load :first-child {
-  background: #19a68c;
+  background: #04f5c9;
   animation-delay: -1.5s;
 }
 .load :nth-child(2) {
-  background: #f63d3a;
+  background: #f38609;
   animation-delay: -1s;
 }
 .load :nth-child(3) {
-  background: #fda543;
+  background: #01b7ff;
   animation-delay: -0.5s;
 }
 .load :last-child {
-  background: #193b48;
+  background: #e61511;
 }
 
 @keyframes spin {
-  0%,
-  100% {
+  0% {
     transform: translate(0);
   }
   25% {
@@ -681,6 +703,11 @@ div[class^="bar-"] {
   }
   90% {
     z-index: -1;
+    opacity: 1;
+  }
+  100% {
+    z-index: -1;
+    opacity: 0;
   }
 }
 /*-------------------------------PROGRESS BARS-------------------------------*/
@@ -697,7 +724,6 @@ div[class^="bar-"] {
 
 html,
 body {
-  background: white;
   width: 100%;
   height: 100%;
   font-family: "PT Sans", sans-serif;
@@ -779,9 +805,9 @@ body {
   -webkit-animation-delay: 2.8s;
   animation-delay: 2.8s;
 }
-.skills-bar-container li .bar-container #progress-flask {
-  -webkit-animation-name: progress-flask;
-  animation-name: progress-flask;
+.skills-bar-container li .bar-container #progress-spl {
+  -webkit-animation-name: progress-spl;
+  animation-name: progress-spl;
   -webkit-animation-delay: 3.5s;
   animation-delay: 3.5s;
 }
@@ -811,7 +837,7 @@ body {
     width: 0%;
   }
   100% {
-    width: 100%;
+    width: 85%;
   }
 }
 @-webkit-keyframes progress-css {
@@ -819,7 +845,7 @@ body {
     width: 0%;
   }
   100% {
-    width: 90%;
+    width: 80%;
   }
 }
 @-webkit-keyframes progress-javascript {
@@ -835,15 +861,15 @@ body {
     width: 0%;
   }
   100% {
-    width: 55%;
+    width: 65%;
   }
 }
-@-webkit-keyframes progress-flask {
+@-webkit-keyframes progress-spl {
   0% {
     width: 0%;
   }
   100% {
-    width: 65%;
+    width: 55%;
   }
 }
 @-moz-keyframes progress-html {
@@ -851,7 +877,7 @@ body {
     width: 0%;
   }
   100% {
-    width: 100%;
+    width: 85%;
   }
 }
 @-moz-keyframes progress-css {
@@ -859,7 +885,7 @@ body {
     width: 0%;
   }
   100% {
-    width: 90%;
+    width: 80%;
   }
 }
 @-moz-keyframes progress-javascript {
@@ -875,15 +901,15 @@ body {
     width: 0%;
   }
   100% {
-    width: 55%;
+    width: 65%;
   }
 }
-@-moz-keyframes progress-flask {
+@-moz-keyframes progress-spl {
   0% {
     width: 0%;
   }
   100% {
-    width: 65%;
+    width: 55%;
   }
 }
 @keyframes progress-html {
@@ -891,7 +917,7 @@ body {
     width: 0%;
   }
   100% {
-    width: 100%;
+    width: 85%;
   }
 }
 @keyframes progress-css {
@@ -899,7 +925,7 @@ body {
     width: 0%;
   }
   100% {
-    width: 90%;
+    width: 80%;
   }
 }
 @keyframes progress-javascript {
@@ -915,31 +941,32 @@ body {
     width: 0%;
   }
   100% {
-    width: 55%;
+    width: 65%;
   }
 }
-@keyframes progress-flask {
+@keyframes progress-spl {
   0% {
     width: 0%;
   }
   100% {
-    width: 65%;
+    width: 55%;
   }
 }
 
 /* ------------------------------PROJECTS------------------------ */
 
 .projects {
+  padding-top: 100px;
   background-color: white;
-  padding: 0px;
+  padding-bottom: 200px;
   margin: 0px;
   width: 100%;
-  height: 100vh;
+
   font-family: "Lato";
 }
 .projects .title {
   position: relative;
-  text-align: right;
+  text-align: center;
   font-size: 80px;
   font-weight: 800;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -950,16 +977,24 @@ body {
 }
 .projects .wrapper {
   width: 100%;
-  max-width: 650px;
   height: auto;
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
   justify-content: space-between;
+  column-gap: 10px;
 }
-.projects .max-width .card {
-  flex: 1;
-  flex-basis: 300px;
-  flex-grow: 0;
+.projects .sub {
+  font-size: 50px;
+  font-family: cursive;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin-right: 50px;
+  color: crimson;
+}
+.projects .card {
+  grid-row: 2;
+
   height: 440px;
   background: #fff;
   border: 2px solid #fff;
@@ -990,6 +1025,7 @@ body {
   left: 0px;
   transition: all 0.7s ease-in-out;
   clip-path: circle(75%);
+  font-size: 14px;
 }
 .projects .card:hover {
   transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
@@ -1054,3 +1090,9 @@ footer a {
 }
 
 /* footer  */
+.contactinfo {
+  justify-content: space-between;
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+}
