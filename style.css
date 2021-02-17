@@ -623,7 +623,7 @@ body {
 }
 .skills-bar-container {
   position: relative;
-  width: 40%;
+
   min-width: 300px;
   top: 50%;
   left: 50%;
@@ -1081,6 +1081,14 @@ footer a {
   }
   .test .carousel .card .box {
     font-size: 16px;
+  }
+  .test .carousel .card img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid crimson;
+    transition: all 0.3s ease;
   }
 
   .skills-bar-container {
